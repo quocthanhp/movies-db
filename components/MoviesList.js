@@ -11,7 +11,7 @@ const MoviesList = ({ moviesList }) => {
       marginLeft={{ xs: "auto", sm: "0", md: "2rem" }}
     >
       {moviesList.map((movie) => (
-        <Grid item xs={12} sm={3} md={3} margin>
+        <Grid key={movie.id} item xs={12} sm={3} md={3} margin>
           <Movie key={movie.id} movie={movie} />
         </Grid>
       ))}
