@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, InputBase, Menu, MenuItem, styled, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Button, InputBase, styled, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addQuery } from "../redux/searchSlice";

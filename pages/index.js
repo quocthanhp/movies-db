@@ -13,15 +13,18 @@ export default function Home() {
 
   useEffect(() => {
     fetchData("game");
-  });
+  }, []);
 
   useEffect(() => {
     fetchData(query);
   }, [query]);
 
   const fetchData = async (query) => {
-    const movies = await axios.get(`${api}&query=${query}`);
-    setMoviesList(movies.data.results);
+    if (query) {
+      const movies = await axios.get(`${api}&query=${query}`);
+      setMoviesList(movies.data.results);
+      console.log(movies.data);
+    }
   };
 
   return <MoviesList moviesList={moviesList} />;
