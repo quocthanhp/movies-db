@@ -30,7 +30,7 @@ const Movie = () => {
   });
 
   return movie ? (
-    <Box display="flex" padding={10} gap={5}>
+    <Box width="80%" margin="auto" display="flex" flexDirection={{xs: "column", md: "row"}} padding={12} gap={5}>
       <img
         style={{ objectFit: "cover" }}
         src={`https://image.tmdb.org/t/p/w400/${movie.poster_path}`}

@@ -5,10 +5,11 @@ const MoviesList = ({ moviesList }) => {
   return (
     <Grid
       container
-      spacing={{ xs: 2 }}
+      spacing={2}
       columns={{ xs: 4, sm: 8, md: 14 }}
       padding={{ xs: 7, md: 10 }}
-      marginLeft={{ xs: "auto", sm: "0", md: "2rem" }}
+      style={{ width: "95%", marginLeft: "auto", marginTop: "auto" }}
+      
     >
       {moviesList.map((movie) => (
         <Grid key={movie.id} item xs={12} sm={3} md={3} margin>
